@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_for_change"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityes.SensorControlActivity"
+    android:background="@color/appBackGroundColor">
+
+    <TextView
+        android:id="@+id/tvDataFromServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ожидаются данные от сервера..."
+        android:layout_centerInParent="true"
+        android:textColor="@color/appTextColor"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSensorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDataFromServer"
+        android:layout_marginBottom="150dp"
+        android:layout_centerHorizontal="true"
+        android:text="Название датчика"
+        android:textColor="@color/appTextColor"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/sensors_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+</RelativeLayout>

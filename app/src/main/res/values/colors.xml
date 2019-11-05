@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F5424242</color>
+    <color name="colorPrimaryDark">#E9424242</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="appBackGroundColor">#CC424242</color>
+    <color name="ToolBarColor">#E9424242</color>
+    <color name="appTextColor">#FFFB00</color>
+    <color name="TabnotSelectedTextColor">#68FFFB00</color>
+
+</resources>

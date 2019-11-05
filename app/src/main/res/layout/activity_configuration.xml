@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackGroundColor"
+    tools:context=".activityes.ConfigurationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="303dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/Mqtt_login_et"
+            android:layout_width="213dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/registration_stile"
+            android:drawableLeft="@mipmap/ic_login_et"
+            android:drawablePadding="-2dp"
+            android:ems="10"
+            android:hint="Mqtt логин"
+            android:inputType="textPersonName"
+            android:paddingLeft="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <EditText
+            android:id="@+id/Mqtt_password_et"
+            android:layout_width="213dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/registration_stile"
+            android:drawableLeft="@mipmap/ic_password_et"
+            android:drawablePadding="-2dp"
+            android:ems="10"
+            android:hint="Mqtt пароль"
+            android:inputType="textPassword"
+            android:paddingLeft="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Mqtt_login_et" />
+
+        <EditText
+            android:id="@+id/Mqtt_servet_et"
+            android:layout_width="213dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/registration_stile"
+            android:drawableLeft="@mipmap/ic_tcp"
+            android:drawablePadding="2dp"
+            android:ems="10"
+            android:hint="URL сервера"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Mqtt_password_et" />
+
+        <EditText
+            android:id="@+id/Mqtt_port_et"
+            android:layout_width="216dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="44dp"
+            android:background="@drawable/registration_stile"
+            android:drawableLeft="@mipmap/ic_port_et"
+            android:drawablePadding="-2dp"
+            android:ems="5"
+            android:hint="Порт "
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Mqtt_password_et" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="Настройки Mqtt соединения"
+            android:textColor="@color/appTextColor"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="16dp"
+            android:text="Настройки Http сервера"
+            android:textColor="@color/appTextColor"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Http_server_url_et"
+            android:layout_width="213dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/registration_stile"
+            android:drawableLeft="@mipmap/ic_http_et"
+            android:drawablePadding="-2dp"
+            android:ems="10"
+            android:hint="URL сервера"
+            android:inputType="textPersonName"
+            android:paddingLeft="1dp"
+            android:textColor="@color/appBackGroundColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <Button
+            android:id="@+id/config_seve_btn"
+            android:layout_width="134dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_stile"
+            android:text="Сохранить "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Http_server_url_et" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

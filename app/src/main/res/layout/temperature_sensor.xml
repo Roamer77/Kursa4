@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_from_testlayout"
+        android:layout_width="203dp"
+        android:layout_height="224dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="487dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:text="На меня заменили " />
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_item_selected"
+    >
+
+    <ImageView
+        android:id="@+id/imageView_flag"
+        android:layout_width="291dp"
+        android:layout_height="108dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/textView_currentState"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_countryName"
+        android:layout_alignTop="@+id/textView_countryName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginRight="101dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text="LOOOL"
+        android:textAlignment="center"
+        android:textColor="@color/appTextColor"/>
+
+    <TextView
+        android:id="@+id/textView_countryName"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_flag"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="-281dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="89dp"
+        android:layout_toRightOf="@+id/imageView_flag"
+        android:gravity="center"
+        android:text="Sensor Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/appTextColor" />
+
+</RelativeLayout>

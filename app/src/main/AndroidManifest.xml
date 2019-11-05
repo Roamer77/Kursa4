@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.val.myapplication">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/new_splash"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activityes.ScriptMakeActivity"></activity>
+        <activity android:name=".activityes.GraphicsActivity" />
+        <activity android:name=".activityes.SliderTest" />
+        <activity android:name=".activityes.ExecutableDeviceActivity" />
+        <activity android:name=".activityes.TemperaturePreashureActivity" />
+        <activity android:name=".activityes.SensorControlActivity" />
+        <activity android:name=".activityes.ConfigurationActivity" />
+        <activity android:name=".activityes.RegistationActivity" />
+        <activity android:name=".activityes.CasomLoginActivity" />
+        <activity android:name=".activityes.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+    </application>
+
+</manifest>
