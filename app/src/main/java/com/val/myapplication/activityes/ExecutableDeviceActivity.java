@@ -118,6 +118,7 @@ public class ExecutableDeviceActivity extends AppCompatActivity {
 
             try {
                 //не забыть указать порт
+
                 final String url = "http://"+localServerUrl+":8089"+"/main/helloAndroid";
                 Log.e("MyTag","ServerUrl= "+localServerUrl);
                 requestAPI.doPostRequest(url, msgServer);
