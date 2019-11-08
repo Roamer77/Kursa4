@@ -22,8 +22,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.val.myapplication.Entity.DataBaseEntity.ScriptEntity;
 import com.val.myapplication.R;
 import com.val.myapplication.utils.RequestAPI;
@@ -45,10 +47,14 @@ public class ScriptTab2 extends Fragment {
     private  String msgToServer;
 
     private  String  localServerUrl;
+
+    private FloatingActionButton floatingActionButton;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.script_tab2, container, false);
+        floatingActionButton= view.findViewById(R.id.scriptFAB);
+
         initView(view);
         registerForContextMenu(scriptListView);
         scriptListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -63,7 +69,22 @@ public class ScriptTab2 extends Fragment {
                 }
             }
         });
+
+        floatingActionButton.setOnClickListener(s->{
+            AlertDialog.Builder alertDialog=new AlertDialog.Builder(getActivity());
+            initTipDialog(alertDialog);
+
+        });
         return view;
+    }
+
+    private void initTipDialog(AlertDialog.Builder alert) {
+        View customLayout=getActivity().getLayoutInflater().inflate(R.layout.tip_layout,null);
+        alert.setView(customLayout);
+        AlertDialog dialog =alert.create();
+        Button button=customLayout.findViewById(R.id.alertDialogBtn);
+        button.setOnClickListener(s->dialog.cancel());
+        dialog.show();
     }
 
     @Override
@@ -95,6 +116,7 @@ public class ScriptTab2 extends Fragment {
         dbHelper = new DBHelper(getActivity());
         SharedPreferences sharedPreferences=getActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE);
         localServerUrl=sharedPreferences.getString("LocalServerUrl","");
+        loadData();
     }
 
     private void initView(View view) {

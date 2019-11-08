@@ -128,6 +128,7 @@ public class Tab1 extends Fragment {
         String password=sharedPreferences.getString("Password","");
         String serverUrl=sharedPreferences.getString("MqttUrlServer", "");
         String serverPort=sharedPreferences.getString("MqttPort", "");
+
         Log.e("MyTag","Login-"+login);
         mqttAPI =new MqttAPI(getActivity(),login,password,serverUrl,serverPort);
         mqttAPI.connect("10");//любая цифра для топика которая не совпадает с id датчиа можно к примеру сразу 99)
